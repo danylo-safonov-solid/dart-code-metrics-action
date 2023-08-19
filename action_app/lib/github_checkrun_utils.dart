@@ -1,5 +1,5 @@
 import 'package:actions_toolkit_dart/core.dart';
-import 'package:dart_code_metrics/lint_analyzer.dart' as dcm;
+import 'package:flutterando_metrics/lint_analyzer.dart' as analyzer;
 import 'package:github/github.dart' as github;
 import 'package:path/path.dart' as p;
 
@@ -12,7 +12,7 @@ class GitHubCheckRunUtils {
 
   github.CheckRunAnnotation issueToAnnotation(
     String sourceAbsolutePath,
-    dcm.Issue issue,
+    analyzer.Issue issue,
   ) {
     final isSingleLineIssue =
         issue.location.start.line == issue.location.end.line;
@@ -38,7 +38,7 @@ class GitHubCheckRunUtils {
   }
 
   github.CheckRunAnnotationLevel severityToAnnotationLevel(
-    dcm.Severity severity,
+    analyzer.Severity severity,
   ) {
     if (_severityMapping.containsKey(severity)) {
       return _severityMapping[severity]!;
@@ -51,9 +51,9 @@ class GitHubCheckRunUtils {
 }
 
 const _severityMapping = {
-  dcm.Severity.none: github.CheckRunAnnotationLevel.notice,
-  dcm.Severity.style: github.CheckRunAnnotationLevel.notice,
-  dcm.Severity.performance: github.CheckRunAnnotationLevel.warning,
-  dcm.Severity.warning: github.CheckRunAnnotationLevel.warning,
-  dcm.Severity.error: github.CheckRunAnnotationLevel.failure,
+  analyzer.Severity.none: github.CheckRunAnnotationLevel.notice,
+  analyzer.Severity.style: github.CheckRunAnnotationLevel.notice,
+  analyzer.Severity.performance: github.CheckRunAnnotationLevel.warning,
+  analyzer.Severity.warning: github.CheckRunAnnotationLevel.warning,
+  analyzer.Severity.error: github.CheckRunAnnotationLevel.failure,
 };

@@ -16,7 +16,7 @@ jobs:
     env:
       TAG: v3
       DOCKERFILE: "scripts/Dockerfile"
-      IMAGE: dkrutskikh/dart_code_metrics_action
+      IMAGE: dkrutskikh/flutterando_metrics_action
 
     steps:
       - uses: actions/checkout@v3.5.2
@@ -39,7 +39,7 @@ jobs:
           DART_VERSION: latest
           GIT_FLUTTER: git://github.com/flutter/flutter.git
           FLUTTER_BRANCH: stable
-          METRICS_DOC: https://pub.dev/api/documentation/dart_code_metrics
+          METRICS_DOC: https://pub.dev/api/documentation/flutterando_metrics
         run: |
           CURRENT_FLUTTER=$(git ls-remote $GIT_FLUTTER refs/heads/$FLUTTER_BRANCH | cut -f 1)
           CURRENT_METRICS=$(curl -s $METRICS_DOC | jq -r '.latestStableVersion')
@@ -52,8 +52,8 @@ jobs:
           echo $PREVIOUS_DART is the sha labelled with the Docker image
           echo $CURRENT_FLUTTER is the latest commit in the $FLUTTER_BRANCH branch of Flutter
           echo $PREVIOUS_FLUTTER is the commit of Flutter on Docker image
-          echo $CURRENT_METRICS is the latest version of dart code metrics
-          echo $PREVIOUS_METRICS is the version of dart code metrics on Docker image
+          echo $CURRENT_METRICS is the latest version of Flutterando Metrics
+          echo $PREVIOUS_METRICS is the version of Flutterando Metrics on Docker image
           if [ "$EVENT" = push ] || [ "$CURRENT_FLUTTER" != "$PREVIOUS_FLUTTER" ] || [ "$CURRENT_METRICS" != "$PREVIOUS_METRICS" ] || [ "$CURRENT_DART" != "$PREVIOUS_DART" ]; then
             SHOULD_PUSH=true
           else

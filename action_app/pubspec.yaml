@@ -1,7 +1,7 @@
 name: action_app
-version: 2.0.0
-description: Github action app that helps to run dart_code_metrics in CI/CD flow.
-repository: https://github.com/danylo-safonov-solid/dart-code-metrics-action
+version: 1.0.0
+description: Github action app that helps to run flutterando_metrics in CI/CD flow.
+repository: https://github.com/Flutterando/flutterando-metrics-action
 publish_to: none
 
 environment:
@@ -9,7 +9,7 @@ environment:
 
 dependencies:
   actions_toolkit_dart: ^0.5.0
-  dart_code_metrics: 5.7.5
+  flutterando_metrics: 5.7.6
   github: ^9.0.0
   meta: ^1.7.0
   path: ^1.8.0

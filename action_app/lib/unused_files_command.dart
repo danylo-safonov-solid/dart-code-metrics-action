@@ -1,4 +1,4 @@
-import 'package:dart_code_metrics/unused_files_analyzer.dart';
+import 'package:flutterando_metrics/unused_files_analyzer.dart';
 import 'package:github/github.dart';
 
 import 'task.dart';

@@ -1,7 +1,7 @@
 @TestOn('vm')
 import 'package:action_app/github_checkrun_utils.dart';
 import 'package:action_app/github_workflow_utils.dart';
-import 'package:dart_code_metrics/lint_analyzer.dart' as dcm;
+import 'package:flutterando_metrics/lint_analyzer.dart' as flutterando;
 import 'package:github/github.dart' as github;
 import 'package:mocktail/mocktail.dart';
 import 'package:source_span/source_span.dart';
@@ -25,10 +25,10 @@ void main() {
             .thenReturn('/home/developer/project');
       });
 
-      test('github annotation from dart_code_metrics multi line issue', () {
+      test('github annotation from flutterando_metrics multi line issue', () {
         final utils = GitHubCheckRunUtils(workflowUtilsMock);
 
-        final issue = dcm.Issue(
+        final issue = flutterando.Issue(
           ruleId: 'rule',
           documentation: Uri(),
           location: SourceSpan(
@@ -46,7 +46,7 @@ void main() {
             ),
             '',
           ),
-          severity: dcm.Severity.none,
+          severity: flutterando.Severity.none,
           message: 'message',
         );
 
@@ -66,10 +66,10 @@ void main() {
         expect(annotation.rawDetails, isNull);
       });
 
-      test('github annotation from dart_code_metrics single line issue', () {
+      test('github annotation from flutterando_metrics single line issue', () {
         final utils = GitHubCheckRunUtils(workflowUtilsMock);
 
-        final issue = dcm.Issue(
+        final issue = flutterando.Issue(
           ruleId: 'rule',
           documentation: Uri(),
           location: SourceSpan(
@@ -87,10 +87,10 @@ void main() {
             ),
             '',
           ),
-          severity: dcm.Severity.none,
+          severity: flutterando.Severity.none,
           message: 'message',
           verboseMessage: 'verbose message',
-          suggestion: const dcm.Replacement(
+          suggestion: const flutterando.Replacement(
             comment: 'replacement comment',
             replacement: 'new code',
           ),
@@ -117,12 +117,12 @@ void main() {
     });
 
     test(
-      'severityToAnnotationLevel returns github annotation level from dart_code_metrics severity',
+      'severityToAnnotationLevel returns github annotation level from flutterando_metrics severity',
       () {
         final utils = GitHubCheckRunUtils(workflowUtilsMock);
 
         expect(
-          utils.severityToAnnotationLevel(dcm.Severity.warning),
+          utils.severityToAnnotationLevel(flutterando.Severity.warning),
           equals(github.CheckRunAnnotationLevel.warning),
         );
       },

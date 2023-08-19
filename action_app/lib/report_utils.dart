@@ -1,4 +1,4 @@
-import 'package:dart_code_metrics/lint_analyzer.dart';
+import 'package:flutterando_metrics/lint_analyzer.dart';
 
 bool isReportContainIssueWithTargetSeverity({
   required Iterable<LintFileReport> report,

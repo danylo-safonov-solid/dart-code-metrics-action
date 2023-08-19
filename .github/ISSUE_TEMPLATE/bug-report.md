@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Report an issue with Dart Code Metrics GitHub Action.
+about: Report an issue with Flutterando Metrics GitHub Action.
 title: "[BUG] "
 labels: bug
 assignees: dkrutskikh
@@ -10,7 +10,7 @@ assignees: dkrutskikh
     This template is for bug reports. If you want to to ask a question, improve existing rule or suggest a new one please use another template.
 -->
 
-* **Dart Code Metrics GitHub Action version:**
+* **Flutterando Metrics GitHub Action version:**
 
 **Please show your full configuration:**
 

@@ -27,7 +27,7 @@ Future<void> main() async {
 
     getPackageDependencies(pubspecUtils, rootFolder, processRunner);
 
-    startGroup(name: 'Running Dart Code Metrics');
+    startGroup(name: 'Running Flutterando Metrics');
 
     final foldersToAnalyze =
         validateFoldersToAnalyze(arguments.folders, rootFolder);

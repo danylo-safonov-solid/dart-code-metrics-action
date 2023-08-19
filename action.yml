@@ -1,6 +1,6 @@
-name: "Dart Code Metrics Action"
-description: "A GitHub action to perform Dart Code Metrics checks automatically."
-author: "Dart Code Checker team"
+name: "Flutterando Metrics Action"
+description: "A GitHub action to perform Flutterando Metrics checks automatically."
+author: "Flutterando team"
 
 branding:
   color: "blue"
@@ -29,7 +29,7 @@ inputs:
   analyze_report_title_pattern:
     description: "Configurable analyze report title pattern."
     required: false
-    default: "Dart Code Metrics analyze report of $packageName."
+    default: "Flutterando Metrics analyze report of $packageName."
   fatal_warnings:
     description: "Treat warning level issues as fatal."
     required: false
@@ -52,7 +52,7 @@ inputs:
   unused_files_report_title_pattern:
     description: "Configurable unused files report title pattern."
     required: false
-    default: "Dart Code Metrics unused files report of $packageName."
+    default: "Flutterando Metrics unused files report of $packageName."
 
 runs:
   using: "docker"

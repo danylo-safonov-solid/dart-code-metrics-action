@@ -23,12 +23,12 @@ env:
   INPUT_FOLDERS: "bin, lib"
   INPUT_RELATIVE_PATH: "action_app"
   INPUT_PULL_REQUEST_COMMENT: true
-  INPUT_ANALYZE_REPORT_TITLE_PATTERN: "Dart Code Metrics analyze report of $packageName"
+  INPUT_ANALYZE_REPORT_TITLE_PATTERN: "Flutterando Metrics analyze report of $packageName"
   INPUT_FATAL_WARNINGS: true
   INPUT_FATAL_PERFORMANCE: true
   INPUT_FATAL_STYLE: true
   INPUT_CHECK_UNUSED_FILES: true
-  INPUT_UNUSED_FILES_REPORT_TITLE_PATTERN: "Dart Code Metrics unused files report of $packageName"
+  INPUT_UNUSED_FILES_REPORT_TITLE_PATTERN: "Flutterando Metrics unused files report of $packageName"
 
 jobs:
   analysis:

@@ -87,7 +87,7 @@ class GitHubWorkflowUtils {
   }
 
   bool isTestMode() =>
-      currentRepositorySlug() == 'dart-code-checker/flutterando-metrics-action';
+      currentRepositorySlug() == 'Flutterando/flutterando-metrics-action';
 
   Map<String, Object?>? _getPullRequestJson() {
     final pathEventPayload = _environmentVariables['GITHUB_EVENT_PATH'];

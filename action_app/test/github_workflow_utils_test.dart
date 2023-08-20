@@ -81,7 +81,7 @@ void main() {
         throwsArgumentError,
       );
 
-      const slug = 'dart-code-checker/flutterando-metrics-action';
+      const slug = 'Flutterando/flutterando-metrics-action';
 
       expect(
         const GitHubWorkflowUtils(
@@ -111,7 +111,7 @@ void main() {
     });
 
     test('isTestMode returns true only for current repo', () {
-      const slug = 'dart-code-checker/flutterando-metrics-action';
+      const slug = 'Flutterando/flutterando-metrics-action';
 
       expect(
         const GitHubWorkflowUtils(

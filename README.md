@@ -1,13 +1,13 @@
 <!-- markdownlint-disable MD041 -->
-[![Build Status](https://shields.io/github/actions/workflow/status/dart-code-checker/flutterando-metrics-action/action_app_analyze.yaml?logo=github&logoColor=white&branch=main)](https://github.com/dart-code-checker/flutterando-metrics-action/)
-[![Action Version](https://img.shields.io/github/v/release/dart-code-checker/flutterando-metrics-action?color=blue&label=action&logo=github&logoColor=white)](https://github.com/marketplace/actions/flutterando-metrics-action/)
-[![License](https://img.shields.io/github/license/dart-code-checker/flutterando-metrics-action)](https://github.com/dart-code-checker/flutterando-metrics-action/blob/master/LICENSE)
-[![GitHub popularity](https://img.shields.io/github/stars/dart-code-checker/flutterando-metrics-action?logo=github&logoColor=white)](https://github.com/dart-code-checker/flutterando-metrics-action/stargazers/)
+[![Build Status](https://shields.io/github/actions/workflow/status/Flutterando/flutterando-metrics-action/action_app_analyze.yaml?logo=github&logoColor=white&branch=main)](https://github.com/Flutterando/flutterando-metrics-action/)
+[![Action Version](https://img.shields.io/github/v/release/Flutterando/flutterando-metrics-action?color=blue&label=action&logo=github&logoColor=white)](https://github.com/marketplace/actions/flutterando-metrics-action/)
+[![License](https://img.shields.io/github/license/Flutterando/flutterando-metrics-action)](https://github.com/Flutterando/flutterando-metrics-action/blob/master/LICENSE)
+[![GitHub popularity](https://img.shields.io/github/stars/Flutterando/flutterando-metrics-action?logo=github&logoColor=white)](https://github.com/Flutterando/flutterando-metrics-action/stargazers/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/dkrutskikh/flutterando_metrics_action?label=runs&logo=github&logoColor=white)](https://github.com/marketplace/actions/flutterando-metrics-action/)
 <!-- markdownlint-enable MD041 -->
 
 <img
-  src="https://raw.githubusercontent.com/dart-code-checker/flutterando-metrics-action/main/doc/.assets/logo.svg"
+  src="https://raw.githubusercontent.com/Flutterando/flutterando-metrics-action/main/doc/.assets/logo.svg"
   alt="Flutterando logo"
   height="150" width="150"
   align="right">
@@ -18,11 +18,11 @@ This action allows to use Flutterando from GitHub Actions.
 
 ## What is Flutterando?
 
-[Flutterando](https://github.com/dart-code-checker/flutterando_metrics) is a static analysis tool that helps you analyze and improve your code quality.
+[Flutterando](https://github.com/Flutterando/flutterando_metrics) is a static analysis tool that helps you analyze and improve your code quality.
 
 ## Usage
 
-Create `dartcodemetrics.yaml` under `.github/workflows` With the following contents.
+Create `flutterandometrics.yaml` under `.github/workflows` With the following contents.
 
 ### Default configuration
 
@@ -68,7 +68,7 @@ jobs:
 * Check run output:
 
   <img
-  src="https://raw.githubusercontent.com/dart-code-checker/flutterando-metrics-action/master/doc/.assets/check_run_output.png"
+  src="https://raw.githubusercontent.com/Flutterando/flutterando-metrics-action/master/doc/.assets/check_run_output.png"
   alt="annotation"
   height="341,5" width="597"
   align="center">
@@ -76,7 +76,7 @@ jobs:
 * Annotation:
 
   <img
-  src="https://raw.githubusercontent.com/dart-code-checker/flutterando-metrics-action/master/doc/.assets/annotation.png"
+  src="https://raw.githubusercontent.com/Flutterando/flutterando-metrics-action/master/doc/.assets/annotation.png"
   alt="annotation"
   height="197" width="608"
   align="center">

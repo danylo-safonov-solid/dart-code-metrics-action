@@ -18,7 +18,7 @@ This action allows to use Flutterando from GitHub Actions.
 
 ## What is Flutterando?
 
-[Flutterando](https://github.com/dart-code-checker/dart-code-metrics) is a static analysis tool that helps you analyze and improve your code quality.
+[Flutterando](https://github.com/dart-code-checker/flutterando_metrics) is a static analysis tool that helps you analyze and improve your code quality.
 
 ## Usage
 
@@ -40,8 +40,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: dart-code-metrics
-        uses: dart-code-checker/flutterando-metrics-action@v3
+      - name: flutterando_metrics
+        uses: Flutterando/flutterando-metrics-action@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 ```

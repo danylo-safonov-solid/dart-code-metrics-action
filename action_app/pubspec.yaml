@@ -5,14 +5,14 @@ repository: https://github.com/Flutterando/flutterando-metrics-action
 publish_to: none
 
 environment:
-  sdk: ">=2.18.0 <4.0.0"
+  sdk: ">=2.18.0 <3.0.0"
 
 dependencies:
-  actions_toolkit_dart: ^0.5.0
+  actions_toolkit_dart: ^0.5.1
   flutterando_metrics: 5.7.6
-  github: ^9.0.0
-  meta: ^1.7.0
-  path: ^1.8.0
+  github: ^9.17.0
+  meta: ^1.9.1
+  path: ^1.8.3
 
 dev_dependencies:
   coverage: ^1.0.3

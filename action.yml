@@ -61,4 +61,5 @@ inputs:
 runs:
   using: "docker"
   image: "Dockerfile"
-  args: inputs.flutter_version
+  args:
+    - ${{ inputs.flutter_version }}

@@ -1,3 +1,5 @@
+#!/bin/sh -l
+
 git clone \
     -b $1 \
     --depth 1 \

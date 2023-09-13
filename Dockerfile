@@ -15,6 +15,9 @@ RUN apt-get update -y \
 
 # Installing Flutter
 RUN git clone -b stable --depth 1 https://github.com/flutter/flutter.git /flutter \
+    && cd /flutter \
+    && git checkout
+    && cd .. 3.10.6 \
     && flutter --version
 
 ENTRYPOINT ["dart", "run", "/action_app/bin/main.dart"]

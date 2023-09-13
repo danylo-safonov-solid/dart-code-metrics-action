@@ -15,6 +15,8 @@ RUN apt-get update -y \
     && apt-get install -y --no-install-recommends unzip \
     && rm -rf /var/lib/apt/lists/*
 
+RUN echo test
+
 RUN echo $flutter_version
 
 # Installing Flutter

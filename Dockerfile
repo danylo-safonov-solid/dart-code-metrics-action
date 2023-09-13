@@ -13,4 +13,6 @@ RUN apt-get update -y \
     && apt-get install -y --no-install-recommends unzip \
     && rm -rf /var/lib/apt/lists/*
 
+COPY action.sh /action.sh
+
 ENTRYPOINT ["/action.sh"]

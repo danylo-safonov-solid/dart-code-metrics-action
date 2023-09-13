@@ -14,7 +14,7 @@ RUN apt-get update -y \
     && rm -rf /var/lib/apt/lists/*
 
 RUN git clone \
-    -b $flutter_version \
+    -b "$flutter_version" \
     --depth 1 \
     https://github.com/flutter/flutter.git \
     /flutter \

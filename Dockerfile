@@ -13,8 +13,6 @@ RUN apt-get update -y \
     && apt-get install -y --no-install-recommends unzip \
     && rm -rf /var/lib/apt/lists/*
 
-COPY action.sh /action.sh
-
 RUN git clone \
     -b $flutter_version \
     --depth 1 \

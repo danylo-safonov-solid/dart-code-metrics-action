@@ -15,4 +15,11 @@ RUN apt-get update -y \
 
 COPY action.sh /action.sh
 
-ENTRYPOINT ["/action.sh"]
+RUN git clone \
+    -b $flutter_version \
+    --depth 1 \
+    https://github.com/flutter/flutter.git \
+    /flutter \
+  && flutter --version
+
+ENTRYPOINT ["dart", "run", "/action_app/bin/main.dart"]

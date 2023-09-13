@@ -1,7 +1,5 @@
 FROM dart:stable
 
-ARG flutter_version
-
 COPY action_app/ /action_app/
 
 RUN /bin/sh -c set -eux;
@@ -15,12 +13,4 @@ RUN apt-get update -y \
     && apt-get install -y --no-install-recommends unzip \
     && rm -rf /var/lib/apt/lists/*
 
-RUN echo test
-
-RUN echo $flutter_version
-
-# Installing Flutter
-RUN git clone -b "$flutter_version" --depth 1 https://github.com/flutter/flutter.git /flutter \
-    && flutter --version
-
-ENTRYPOINT ["dart", "run", "/action_app/bin/main.dart"]
+ENTRYPOINT ["sh action.sh"]

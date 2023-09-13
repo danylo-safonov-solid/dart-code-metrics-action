@@ -1,6 +1,6 @@
-ARG flutter_version
-
 FROM dart:stable
+
+ARG flutter_version
 
 COPY action_app/ /action_app/
 

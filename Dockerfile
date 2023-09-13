@@ -13,4 +13,4 @@ RUN apt-get update -y \
     && apt-get install -y --no-install-recommends unzip \
     && rm -rf /var/lib/apt/lists/*
 
-ENTRYPOINT ["action.sh"]
+ENTRYPOINT ["/action.sh"]

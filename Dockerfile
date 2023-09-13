@@ -1,3 +1,5 @@
+ARG flutter_version
+
 FROM dart:stable
 
 COPY action_app/ /action_app/
@@ -14,7 +16,7 @@ RUN apt-get update -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Installing Flutter
-RUN git clone -b '3.10.6' --depth 1 https://github.com/flutter/flutter.git /flutter \
+RUN git clone -b "$flutter_version" --depth 1 https://github.com/flutter/flutter.git /flutter \
     && flutter --version
 
 ENTRYPOINT ["dart", "run", "/action_app/bin/main.dart"]
